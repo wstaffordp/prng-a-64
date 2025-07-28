@@ -12,7 +12,9 @@ It accepts the following argument.
 
 The return value data type is `uint8_t`.
 
-It has a period of between 2¹⁴ and 2¹⁵, precisely 18688. Furthermore, a full cycle generates at least 1 of each number from a range of 2⁸ numbers and zeroland escapes immediately after 1 subsequent number generation.
+It has a period of between 2¹⁴ and 2¹⁵, precisely 18688, without broken cycles. Furthermore, a full cycle generates at least 1 of each number from a range of 2⁸ numbers and zeroland escapes immediately after 1 subsequent number generation.
+
+Incrementing `b` by `2` outside of `flurryburst8` whenever `a` is `0` behaves as a jump function. Generating 73 subsequent numbers after either jumping or seeding the state resets `a` to `0`. 256 repetitions of both generating 73 subsequent numbers and jumping generates the same frequency of numbers as a full cycle that generates 18688 numbers without jumping.
 
 It passes `stdin8` PractRand tests up to 4KB.
 
