@@ -1,8 +1,16 @@
+### FlurryBurst
+
+---
+
+![FlurryBurst](https://repository-images.githubusercontent.com/1027433458/ac578053-7f9c-47ce-ac02-531e9b1c339c "FlurryBurst")
+
+---
+
 FlurryBurst is an extremely-fast, medium-period, statistically-strong PRNG that replaces many variants of PCG and Xorshift with enhanced statistical properties, faster generation speeds and larger periods.
 
-As an obligatory disclaimer, it's not a CSPRNG for use in cryptography.
-
 The license is public domain. Anyone is free to use it for any purpose without restriction. It has no warranty.
+
+---
 
 `flurryburst8` is a deterministic PRNG function that generates an 8-bit, pseudorandom, unsigned integer from 8-bit state integers.
 
@@ -18,14 +26,14 @@ Incrementing `b` by `2` outside of `flurryburst8` whenever `a` is `0` behaves as
 
 It passes `stdin8` PractRand tests up to 4KB.
 
-The RXS M XS variants of PCG8 pass `stdin8` PractRand tests up to a range of 1KB to 2KB. Furthermore, they generate predictable output with 1 cycle that has 1 of each number from a range of 2⁸ numbers.
+RXS M XS variants of PCG8 pass `stdin8` PractRand tests up to a range of 1KB to 2KB. Furthermore, they generate predictable output with 1 cycle that has 1 of each number from a range of 2⁸ numbers.
 
 Xorshift8 passes `stdin8` PractRand tests up to 1KB. Furthermore, it doesn't generate `0` and generates predictable output with 1 cycle that has 1 of each number from a range of (2⁸ - 1) numbers.
 
 Detailed benchmark results are coming soon.
 
-I welcome [submissions](https://github.com/wstaffordp/flurryburst/issues) of algorithms in each class that challenge the aforementioned claims.
+In conclusion, FlurryBurst8 provides enhanced distribution, period, security, speed and statistical test results as an ideal alternative to RXS M XS variants of PCG8 and Xorshift8.
+
+---
 
 16-bit, 32-bit and 64-bit variants are coming soon.
-
-In conclusion, FlurryBurst provides enhanced distribution, period, security, speed and statistical test results as an ideal alternative to many PCG and Xorshift variants.
